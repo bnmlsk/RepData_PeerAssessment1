@@ -23,8 +23,8 @@ total_steps_per_day <- activity %>%
   group_by(date) %>%
   summarise(steps = sum(steps))
 
-ggplot(total_steps_per_day, aes(x = date, y = steps)) +
-    geom_bar(stat = 'identity')
+ggplot(total_steps_per_day, aes(x = steps)) +
+    geom_histogram()
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
@@ -111,8 +111,8 @@ imputed_total_per_day <- imputed %>%
   group_by(date) %>%
   summarise(steps = sum(steps))
 
-ggplot(imputed_total_per_day, aes(x = date, y = steps)) +
-    geom_bar(stat = 'identity')
+ggplot(imputed_total_per_day, aes(x = steps)) +
+    geom_histogram()
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
